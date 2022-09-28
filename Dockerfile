@@ -1,2 +1,2 @@
 FROM tomcat:8
-COPY dockerfile/webapp* /usr/local/tomcat/webapps/
+COPY ONE/docker* /var/lib/jenkins/webapps/
