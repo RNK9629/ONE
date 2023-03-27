@@ -1,0 +1,47 @@
+{
+	"requiresCompatibilities": [
+	  "EXTERNAL"
+	],
+	"containerDefinitions": [
+	  {
+		"name": "kl-pg-connect-api",
+		"image": "634677623658.dkr.ecr.us-east-1.amazonaws.com/kl-pg-connect-api:GIT_COMMIT",
+		"memory":500 ,
+        "memoryReservation":400,
+		"cpu":400 ,
+		"essential": true,
+		"environment": [
+			{
+				"name": "START_CMD",
+				"value": "startup_cmd"
+			},
+			{
+				"name": "ALTER_DB",
+				"value": "alter_db"
+			},
+			{
+				"name": "SYNC_DB",
+				"value": "sync_db"
+			}
+		],
+    "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "GROUP_NAME",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "kl-pg-connect-api"
+        }
+      },
+		"portMappings": [
+		  {
+			"containerPort": 5000,
+			"hostPort": 9015,
+			"protocol": "tcp"
+		  }
+		]
+	  }
+	],
+    "networkMode": "bridge",
+	"family": "kl-pg-connect-api",
+	"taskRoleArn": "arn:aws:iam::634677623658:role/ecsanywhererole"
+  }

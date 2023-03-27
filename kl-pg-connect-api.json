@@ -1,0 +1,42 @@
+{
+	"family": "kl-pg-connect-api",
+	"taskRoleArn": "arn:aws:iam::634677623658:role/dev-adfarm",
+	"containerDefinitions": [{
+		"name": "kl-pg-connect-api",
+		"image": "634677623658.dkr.ecr.us-east-1.amazonaws.com/kl-pg-connect-api:GIT_COMMIT",
+		"cpu": 300,
+		"memory": 400,
+		"memoryReservation": 300,
+		"volumesFrom": [],
+		"portMappings": [{
+			"hostPort": 0,
+			"containerPort": 5000,
+			"protocol": "tcp"
+		}],
+		"essential": true,
+		"logConfiguration": {
+			"logDriver": "awslogs",
+			"options": {
+			  "awslogs-group": "GROUP_NAME",
+			  "awslogs-region": "us-east-1",
+			  "awslogs-stream-prefix": "kl-pg-connect-api"
+			}
+		  },
+		  "environment": [
+			{
+				"name": "START_CMD",
+				"value": "startup_cmd"
+			},
+			{
+				"name": "ALTER_DB",
+				"value": "alter_db"
+			},
+			{
+				"name": "SYNC_DB",
+				"value": "sync_db"
+			}
+		],
+		"mountPoints": []
+	}
+]
+}

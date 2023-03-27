@@ -1,15 +1,57 @@
 {
-  "name": "nodejs-template-1.0",
-  "version": "1.0.0",
-  "description": "nodejs-template-1.0",
-  "main": "server.js",
+  "name": "@kaaylabs/kl-pg-connect-api",
+  "version": "1.1.2",
+  "description": "Centralized payment gateway api",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "jest",
-    "start": "PORT=3000 node server.js",
-    "build": "npm run-script build"
+    "dev:start": "nodemon server.js",
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kaaylabs/kl-pg-connect-api.git"
+  },
+  "keywords": [
+    "kl-pg-api",
+    "kl-pg-connect-api"
+  ],
+  "author": "Chandru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kaaylabs/kl-pg-connect-api/issues"
+  },
+  "homepage": "https://github.com/Kaaylabs/kl-pg-connect-api#readme",
   "dependencies": {
-    "jest": "^26.6.3",
-    "supertest": "^6.0.1"
+    "async": "^3.2.0",
+    "axios": "^0.21.0",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.1",
+    "handlebars": "^4.7.6",
+    "hat": "0.0.3",
+    "helmet": "^3.23.3",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.2.5",
+    "node-fetch": "^2.6.6",
+    "sequelize": "^6.19.0",
+    "razorpay": "^2.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.2.0",
+    "eslint-plugin-spellcheck": "0.0.17",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.2.1"
   }
 }

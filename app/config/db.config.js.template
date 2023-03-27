@@ -1,0 +1,13 @@
+module.exports = {
+  HOST: "DB_SERVER_URL",
+  USER: "DB_USER",
+  PASSWORD: "DB_PASSWORD",
+  DB: "DB_NAME",
+  dialect: "mysql",
+  pool: {
+    max: 5,
+    min: 0,
+    acquire: 30000,
+    idle: 10000
+  }
+};
