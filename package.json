@@ -1,6 +1,6 @@
 {
   "name": "@kaaylabs/kl-pg-connect-api",
-  "version": "1.1.2",
+  "version": "1.2",
   "description": "Centralized payment gateway api",
   "main": "lib/index.js",
   "scripts": {
